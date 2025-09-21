@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pokemon Explorer</h1>
+            <p>Discover and explore Pokemon from the Pokedex</p>
+        </header>
+
+        <div class="search-section">
+            <div class="demo-notice" id="demoNotice" style="display: none;">
+                <p>🎮 Demo Mode: API unavailable, showing sample Pokemon data</p>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search Pokemon by name or ID..." />
+                <button id="searchBtn">Search</button>
+                <button id="randomBtn">Random Pokemon</button>
+            </div>
+        </div>
+
+        <div class="filters">
+            <select id="typeFilter">
+                <option value="">All Types</option>
+            </select>
+            <button id="clearFilters">Clear Filters</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="loader"></div>
+            <p>Loading Pokemon...</p>
+        </div>
+
+        <div class="error" id="error">
+            <p>Pokemon not found. Please try a different search.</p>
+        </div>
+
+        <div class="pokemon-container" id="pokemonContainer">
+            <!-- Pokemon cards will be inserted here -->
+        </div>
+
+        <div class="favorites-section">
+            <h2>Favorites</h2>
+            <div class="favorites-container" id="favoritesContainer">
+                <!-- Favorite Pokemon will appear here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
